@@ -12,7 +12,7 @@ Não é preciso entrar dentro do container para iniciar iniciar o nodejs, o mesm
 
 ### Sobre as imagens utilizadas.
 
-As imagens utilizadas estão disponíveis no Docker Hub, sendo assim, basta utiliza-las, ou fazer o build do projeto.
+As imagens utilizadas estão disponíveis no Docker Hub, sendo assim, basta utiliza-las, ou fazer o build do projeto. A pasta *node_modules* foi removida do node, se quiser refazer o build da imagem do app do node, dê um *npm install* antes. Também é preciso criar a pasta do *mysql* na raiz do projeto, que é a pasta onde fica os dados dos banco de dados.
 
 ### Como utilizar ?
 
