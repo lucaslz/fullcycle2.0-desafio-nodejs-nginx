@@ -10,7 +10,7 @@ A base de dados é criada através de um script. Na raiz do projeto existe uma p
 
 Não é preciso entrar dentro do container para iniciar iniciar o nodejs, o mesmo ja é iniciado automaticamente.
 
-### Sobre as imagens utilizada.
+### Sobre as imagens utilizadas.
 
 As imagens utilizadas estao disponíveis no Docker Hub, sendo assim, basta utiliza-las, ou fazer o build do projeto.
 
