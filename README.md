@@ -6,7 +6,7 @@
 
 A base de dados é criada através de um script. Na raiz do projeto existe uma pasta chamada *sql-scripts*, que é utilizada como um volumente para a pasta de scripts do mysql, sendo assim, só foi preciso adicionar o seguinte comando *--init-file /docker-entrypoint-initdb.d/database.sql* na tag command do docker composer, para o mysql iniciar o script sql, o script basicamente verifica se a tabela existe, caso não exista ele à cria.
 
-### Criação da base de dados:
+### Sobre a inicialização do NodeJS:
 
 Não é preciso entrar dentro do container para iniciar iniciar o nodejs, o mesmo ja é iniciado automaticamente.
 
