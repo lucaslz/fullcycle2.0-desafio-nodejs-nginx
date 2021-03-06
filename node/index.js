@@ -9,17 +9,18 @@ app.get('/', async (req, res) => {
     await peoples.insPeople(req.query.name);
     const conn = await connection.connect();
     const sql = `SELECT * FROM peoples`
-    conn.query(sql, (error, results, fields) => {
+    conn.query(sql, async (error, sltPeoples, fields) => {
         if (error) {
           return console.error(error.message);
         }
         let dadosTela = "<ul>";
-        results.forEach(element => {
-            var newFormatDate = new Date(element.created_at).toISOString().slice(0,10)
+        sltPeoples.forEach(element => {
+            var newFormatDate = new Date(element.created_at).toISOString().slice(0,10) + " " + new Date(element.created_at).toISOString().slice(11,19)
             dadosTela += "<li> " + element.id + " | " + element.name + " | " + newFormatDate + "</li>";
         });
         dadosTela += "</ul>";
-        res.send("<h1>Full Cycle</h1><br><h3>Lista de nomes cadastrada no banco de dados:<h3>" + dadosTela);
+        results = await "<h1>Full Cycle</h1><br><h3>Lista de nomes cadastrada no banco de dados:<h3>" + dadosTela;
+        res.send(results);
     });
 });
 
