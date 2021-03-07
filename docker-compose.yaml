@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile
     image: lucaslz/app:prod
     container_name: app
-    command: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh node index.js
+    command: dockerize -wait tcp://db:3306 -timeout 50s docker-entrypoint.sh node index.js
     networks:
       - node-network
     volumes:

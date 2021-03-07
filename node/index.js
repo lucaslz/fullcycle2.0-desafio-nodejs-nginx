@@ -9,7 +9,7 @@ app.get('/', async (req, res) => {
     await peoples.insPeople(req.query.name);
     const conn = await connection.connect();
     const sql = `SELECT * FROM peoples`
-    conn.query(sql, async (error, sltPeoples, fields) => {
+    await conn.query(sql, async (error, sltPeoples, fields) => {
         if (error) {
           return console.error(error.message);
         }
